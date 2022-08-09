@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { CustomersComponent } from './customers.component';
 import { ListCustomersComponent } from './list-customers/list-customers.component';
-import { CreateCustomerComponent } from './create-customer/create-customer.component';
 
 const routes: Routes = [
   {
@@ -12,7 +11,6 @@ const routes: Routes = [
     component: CustomersComponent,
     children: [
       { path: 'list', component: ListCustomersComponent },
-      { path: 'create', component: CreateCustomerComponent },
       { path: '', redirectTo: 'list', pathMatch: 'full' },
     ]
   }

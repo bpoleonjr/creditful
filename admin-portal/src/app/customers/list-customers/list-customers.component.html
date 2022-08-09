@@ -7,21 +7,57 @@
     </dxo-popup>
     <dxo-form>
       <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
-        <dxi-item dataField="first_name"></dxi-item>
-        <dxi-item dataField="last_name"></dxi-item>
-        <dxi-item dataField="date_birth"></dxi-item>
-        <dxi-item dataField="ssn"></dxi-item>
-        <dxi-item dataField="age"></dxi-item>
-        <dxi-item dataField="email"></dxi-item>
-        <dxi-item dataField="mobile_phone_number"></dxi-item>
+        <dxi-item dataField="customer_number">
+          <dxi-validation-rule type="required" message="A customer number is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="first_name">
+          <dxi-validation-rule type="required" message="A first name is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="last_name">
+          <dxi-validation-rule type="required" message="A last name is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="date_birth">
+          <dxi-validation-rule type="required" message="A date of birth is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="ssn">
+          <dxi-validation-rule type="required" message="An SSN is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="age" [visible]="false"></dxi-item>
+        <dxi-item dataField="email">
+          <dxi-validation-rule type="required" message="An email is required">
+          </dxi-validation-rule>
+          <dxi-validation-rule type="email" message="Email is invalid">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="mobile_phone_number">
+          <dxi-validation-rule type="required" message="A mobile number is required">
+          </dxi-validation-rule>
+        </dxi-item>
         <dxi-item dataField="join_date"></dxi-item>
       </dxi-item>
 
       <dxi-item itemType="group" caption="Primary Address" [colCount]="2" [colSpan]="2">
-        <dxi-item dataField="address_line_1"></dxi-item>
-        <dxi-item dataField="city"></dxi-item>
-        <dxi-item dataField="state"></dxi-item>
-        <dxi-item dataField="zip_code"></dxi-item>
+        <dxi-item dataField="address_line_1">
+          <dxi-validation-rule type="required" message="Line 1 of the address is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="city">
+          <dxi-validation-rule type="required" message="An address city is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="state">
+          <dxi-validation-rule type="required" message="An address state is required">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item dataField="zip_code">
+          <dxi-validation-rule type="required" message="An address zip code is required">
+          </dxi-validation-rule>
+        </dxi-item>
       </dxi-item>
     </dxo-form>
   </dxo-editing>

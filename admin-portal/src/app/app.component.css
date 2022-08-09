@@ -1,0 +1,22 @@
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+  display: flex;
+}
+
+nav > h2 {
+  margin: 0;
+  padding: 1rem;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+}
+
+nav > ul > li {
+  margin-left: 16px;
+}

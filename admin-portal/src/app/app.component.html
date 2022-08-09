@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <h2 class="navbar-brand">{{ appTitle }}</h2>
-    <ul class="navbar-nav">
+    <a class="m-auto m-sm-0 text-decoration-none" href="/"><h2 class="navbar-brand text-center text-white">{{ appTitle }}</h2></a>
+    <ul class="navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link" [routerLink]="['home']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
         true}">Home</a></li>
       <li class="nav-item"><a class="nav-link" [routerLink]="['customers/list']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:

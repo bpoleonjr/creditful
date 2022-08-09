@@ -1,0 +1,18 @@
+[
+  {
+    "customer_number": "00001",
+    "first_name": "Boyce",
+    "last_name": "Poleon",
+    "date_birth": "1/17/1996",
+    "ssn": "000-00-0000",
+    "email": "boycepoleonjr@gmail.com",
+    "primary_address": {
+      "address_line_1": "000 Address St",
+      "city": "Some City",
+      "state": "Some State",
+      "zip_code": "88888"
+    },
+    "mobile_phone_number": "000-000-000",
+    "join_date": "8/9/2022"
+  }
+]

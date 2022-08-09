@@ -12,7 +12,7 @@ const routes: Routes = [
       .then(m => m.CustomersModule)
   },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

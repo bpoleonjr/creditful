@@ -4,5 +4,15 @@ html {
 
 body {
   margin: 0;
+  background: rgb(18, 148, 144);
+  background: linear-gradient(90deg, rgba(18, 148, 144, 1) 0%, rgba(18, 148, 144, 1) 35%, rgba(112, 183, 126, 1) 100%);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

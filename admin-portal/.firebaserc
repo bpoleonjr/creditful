@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "creditful-ac850": {
+      "hosting": {
+        "admin-portal": [
+          "creditful-ac850"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "creditful-ac850"
+  }
+}

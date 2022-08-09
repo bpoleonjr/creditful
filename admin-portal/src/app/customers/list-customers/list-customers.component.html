@@ -1,1 +1,44 @@
-<dx-data-grid [dataSource]="customers"></dx-data-grid>
+<dx-data-grid [dataSource]="dataSource" [showBorders]="true" [allowColumnReordering]="true" [columnAutoWidth]="true">
+  <dxo-load-panel [enabled]="true">
+  </dxo-load-panel>
+
+  <dxo-editing mode="popup" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
+    <dxo-popup title="Customer Info" [showTitle]="true" [width]="700" [height]="525">
+    </dxo-popup>
+    <dxo-form>
+      <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
+        <dxi-item dataField="first_name"></dxi-item>
+        <dxi-item dataField="last_name"></dxi-item>
+        <dxi-item dataField="date_birth"></dxi-item>
+        <dxi-item dataField="ssn"></dxi-item>
+        <dxi-item dataField="age"></dxi-item>
+        <dxi-item dataField="email"></dxi-item>
+        <dxi-item dataField="mobile_phone_number"></dxi-item>
+        <dxi-item dataField="join_date"></dxi-item>
+      </dxi-item>
+
+      <dxi-item itemType="group" caption="Primary Address" [colCount]="2" [colSpan]="2">
+        <dxi-item dataField="address_line_1"></dxi-item>
+        <dxi-item dataField="city"></dxi-item>
+        <dxi-item dataField="state"></dxi-item>
+        <dxi-item dataField="zip_code"></dxi-item>
+      </dxi-item>
+    </dxo-form>
+  </dxo-editing>
+
+  <dxi-column dataField="customer_number" dataType="number" caption="Customer #" [width]="90" [fixed]="true" [visible]="true"></dxi-column>
+  <dxi-column dataField="first_name" dataType="string" caption="First Name" [visible]="true"></dxi-column>
+  <dxi-column dataField="last_name" dataType="string" caption="Last Name" [visible]="true"></dxi-column>
+  <dxi-column dataField="date_birth" dataType="string" caption="Date of Birth" [visible]="true" [customizeText]="dateBirth_customText"></dxi-column>
+  <dxi-column dataField="age" dataType="string" caption="Age" [visible]="true"></dxi-column>
+  <dxi-column dataField="ssn" dataType="string" caption="SSN" [visible]="false"></dxi-column>
+  <dxi-column dataField="last4ofssn" dataType="string" caption="Last 4 of SSN" [visible]="true"></dxi-column>
+  <dxi-column dataField="email" dataType="string" [visible]="false"></dxi-column>
+  <dxi-column dataField="address_line_1" dataType="string" caption="Address Line 1" [visible]="false"></dxi-column>
+  <dxi-column dataField="city" dataType="string" caption="City" [visible]="false"></dxi-column>
+  <dxi-column dataField="state" dataType="string" caption="State" [visible]="false"></dxi-column>
+  <dxi-column dataField="zip_code" dataType="number" caption="Zip Code" [visible]="false"></dxi-column>
+  <dxi-column dataField="mobile_phone_number" dataType="string" caption="Mobile #" [visible]="false"></dxi-column>
+  <dxi-column dataField="join_date" dataType="date" caption="Join Date" [visible]="false"></dxi-column>
+  <dxo-column-chooser [enabled]="true" mode="dragAndDrop"></dxo-column-chooser>
+</dx-data-grid>

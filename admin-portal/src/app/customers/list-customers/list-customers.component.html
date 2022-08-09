@@ -1,4 +1,4 @@
-<dx-data-grid [dataSource]="dataSource" [showBorders]="true" [allowColumnReordering]="true" [columnAutoWidth]="true">
+<dx-data-grid [dataSource]="dataSource" [showBorders]="true" [allowColumnReordering]="true" [columnAutoWidth]="true" (onRowInserting)="onRowInserting($event)">
   <dxo-load-panel [enabled]="true">
   </dxo-load-panel>
 
@@ -14,9 +14,13 @@
         <dxi-item dataField="first_name">
           <dxi-validation-rule type="required" message="A first name is required">
           </dxi-validation-rule>
+          <dxi-validation-rule type="stringLength" [min]="3" message="Name should be at least 3 symbols long">
+          </dxi-validation-rule>
         </dxi-item>
         <dxi-item dataField="last_name">
           <dxi-validation-rule type="required" message="A last name is required">
+          </dxi-validation-rule>
+          <dxi-validation-rule type="stringLength" [min]="3" message="Name should be at least 3 symbols long">
           </dxi-validation-rule>
         </dxi-item>
         <dxi-item dataField="date_birth">
@@ -62,14 +66,13 @@
     </dxo-form>
   </dxo-editing>
 
-  <dxi-column dataField="customer_number" dataType="number" caption="Customer #" [width]="90" [fixed]="true"
+  <dxi-column dataField="customer_number" dataType="string" caption="Customer #" [width]="90" [fixed]="true"
     [visible]="true"></dxi-column>
   <dxi-column dataField="first_name" dataType="string" caption="First Name" [visible]="true"></dxi-column>
   <dxi-column dataField="last_name" dataType="string" caption="Last Name" [visible]="true"></dxi-column>
   <dxi-column dataField="date_birth" dataType="date" caption="Date of Birth" [visible]="true"></dxi-column>
-  <!-- [customizeText]="dateBirth_customText" -->
-  <dxi-column dataField="age" dataType="string" caption="Age" [visible]="true"></dxi-column>
   <dxi-column dataField="ssn" dataType="string" caption="SSN" [visible]="false"></dxi-column>
+  <dxi-column dataField="age" dataType="string" caption="Age" [visible]="true"></dxi-column>
   <dxi-column dataField="last4ofssn" dataType="string" caption="Last 4 of SSN" [visible]="true"></dxi-column>
   <dxi-column dataField="email" dataType="string" [visible]="false"></dxi-column>
   <dxi-column dataField="address_line_1" dataType="string" caption="Address Line 1" [visible]="false"></dxi-column>

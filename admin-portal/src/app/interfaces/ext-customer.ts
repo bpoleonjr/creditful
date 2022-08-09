@@ -1,5 +1,5 @@
 export interface ExtCustomer {
-  customer_number: number;
+  customer_number: string;
   first_name: string;
   last_name: string;
   date_birth: string;

@@ -4,8 +4,8 @@ html {
 
 body {
   margin: 0;
-  background: rgb(18, 148, 144);
-  background: linear-gradient(90deg, rgba(18, 148, 144, 1) 0%, rgba(18, 148, 144, 1) 35%, rgba(112, 183, 126, 1) 100%);
+  background: #616b83;/*  rgb(18, 148, 144); */
+  background: linear-gradient(90deg, #616b83 0%, #d6d9e0 100%);
 
 }
 

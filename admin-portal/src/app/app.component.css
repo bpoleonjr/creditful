@@ -1,5 +1,5 @@
 nav {
-  background-color: #065143;
+  background-color: #364261;
 }
 
 nav * ul {
@@ -16,5 +16,5 @@ ul.navbar-nav>li {
 
 .active-link {
   font-weight: bolder;
-  color: #70B77E;
+  color: #f0d687;
 }

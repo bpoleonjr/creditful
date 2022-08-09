@@ -3,7 +3,7 @@ export interface ExtCustomer {
   first_name: string;
   last_name: string;
   date_birth: string;
-  ssn: string;
+  ssn?: string;
   email: string;
   primary_address: Address;
   mobile_phone_number: string;

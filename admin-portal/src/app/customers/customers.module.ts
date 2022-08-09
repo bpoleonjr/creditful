@@ -7,7 +7,7 @@ import { ListCustomersComponent } from './list-customers/list-customers.componen
 
 import { CustomersRoutingModule } from './customers-routing.module';
 
-import { DxDataGridModule } from 'devextreme-angular';
+import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
 
 @NgModule({
   declarations: [

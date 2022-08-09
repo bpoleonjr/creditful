@@ -42,9 +42,4 @@ export class ListCustomersComponent implements OnInit {
         }))
       .subscribe(data => this.dataSource = data);
   }
-
-  dateBirth_customText(cellInfo: any) {
-    return cellInfo.value.toDateString();
-  }
-
 }

@@ -20,8 +20,8 @@ export class ListCustomersComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    //this.http.get<ExtCustomer[]>(`${environment.api_url}/customers.json?key=${environment.api_key}&size=3`)
-    this.http.get<ExtCustomer[]>(`assets\\customers.json`)
+    this.http.get<ExtCustomer[]>(`${environment.api_url}/customers.json?key=${environment.api_key}&size=3`)
+    //this.http.get<ExtCustomer[]>(`assets\\customers.json`)
       .pipe(
         tap(data => console.log(data)),
         map((ext_customers: ExtCustomer[]) => {
